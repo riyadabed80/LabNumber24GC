@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "ShowItemDetails";
+}
+
+@model LabNumber24GC.Models.Item
+<h2>Show Item Details</h2>
+
+<form action="/Home/EditItem" method="post">
+    Name:<input type="text" value="@Model.Name" name="Name" /><br />
+    Description:<input type="text" value="@Model.Description" name="Description" /><br />
+    Quantity:<input type="number" value="@Model.Quantity" name="Quantity" /><br />
+    Price:<input type="number" value="@Model.Price"name="Price" /><br />
+
+    <input type="submit" value="Save Updates" />
+</form>
+

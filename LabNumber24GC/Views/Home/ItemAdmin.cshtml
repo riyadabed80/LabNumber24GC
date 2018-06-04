@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "ItemAdmin";
+}
+
+<h2>ItemAdmin</h2>
+
+@*<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var c in ViewBag.ItemList)
+    {
+    <tr>
+        <td>@c.Name</td>
+        <td>@c.Description</td>
+        <td>@c.Quantity</td>
+        <td>@c.Price</td>
+        <td><a href="/Home/DeleteItem?Name=@c.Name" onclick="return confirm('Are you sure?')">Delete</a></td>
+        <td><a href="/Home/AddItem">Add</a></td>
+        <td><a href="/Home/ShowItemDetails?Name=@c.Name">Details</a></td>
+
+    </tr>
+    }
+</table>*@
+<div class="panel-collapse">
+    <div class="panel-primary">
+        @foreach (var c in ViewBag.ItemList)
+        {<div class="col-md-4 col-xs-6">
+
+                <h4>@c.Name</h4>
+
+                <h4> @c.Description</h4>
+                <h4> @c.Quantity</h4>
+                <h4>@c.Price</h4>
+                <h4><a href="/Home/DeleteItem?Name=@c.Name" onclick="return confirm('Are you sure?')">Delete</a></h4>
+                <h4><a href="/Home/AddItem">Add</a></h4>
+                <h4><a href="/Home/ShowItemDetails?Name=@c.Name">Details</a></h4>
+            </div>
+
+
+
+
+        }
+    </div>
+</div>
