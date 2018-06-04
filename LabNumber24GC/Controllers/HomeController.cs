@@ -77,8 +77,8 @@ namespace LabNumber24GC.Controllers
             ORM.Items.Add(newItem);
 
             ORM.SaveChanges();
-            ViewBag.ItemList = ORM.Items.ToList();
-            return View("ItemAdmin");
+            //ViewBag.ItemList = ORM.Items.ToList();
+            return View(ORM.Items.ToList());
 
 
 
